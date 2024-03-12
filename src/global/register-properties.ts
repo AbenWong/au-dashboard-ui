@@ -7,8 +7,8 @@ export default function registerProperties(app: App) {
     foo() {
       console.log("foo");
     },
-    formatTime(value: string) {
-      return formatUtcString(value);
-    },
+    // formatTime(value: string) {
+    //   return formatUtcString(value);
+    // },
   };
 }
