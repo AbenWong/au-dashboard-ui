@@ -1,32 +1,32 @@
-import hyRequest from "../../index";
+import hyRequest from '../../index'
 
 enum DashboardAPI {
-  categoryGoodsCount = "/goods/category/count",
-  categoryGoodsSale = "/goods/category/sale",
-  categoryGoodsFavor = "/goods/category/favor",
-  addressGoodsSale = "/goods/address/sale",
+  categoryGoodsCount = '/trending/all/week?api_key==en-US',
+  categoryGoodsSale = '/trending/all/week?api_key==en-US',
+  categoryGoodsFavor = '/goods/category/favor',
+  addressGoodsSale = '/goods/address/sale'
 }
 
 export function getCategoryGoodsCount() {
   return hyRequest.get({
-    url: DashboardAPI.categoryGoodsCount,
-  });
+    url: DashboardAPI.categoryGoodsCount
+  })
 }
 
 export function getCategoryGoodsSale() {
   return hyRequest.get({
-    url: DashboardAPI.categoryGoodsSale,
-  });
+    url: DashboardAPI.categoryGoodsSale
+  })
 }
 
 export function getCategoryGoodsFavor() {
   return hyRequest.get({
-    url: DashboardAPI.categoryGoodsFavor,
-  });
+    url: DashboardAPI.categoryGoodsFavor
+  })
 }
 
 export function getAddressGoodsSale() {
   return hyRequest.get({
-    url: DashboardAPI.addressGoodsSale,
-  });
+    url: DashboardAPI.addressGoodsSale
+  })
 }
