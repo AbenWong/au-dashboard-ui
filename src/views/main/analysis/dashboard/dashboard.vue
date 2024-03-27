@@ -1,17 +1,17 @@
 <template>
   <div class="dashboard">
     <el-row :gutter="10">
-      <el-col :span="7">
+      <el-col :span="12">
         <hy-card title="分类商品数量(饼图)">
           <pie-echart :pieData="categoryGoodsCount"></pie-echart>
         </hy-card>
       </el-col>
-      <el-col :span="10">
+      <!-- <el-col :span="10">
         <hy-card title="不同城市商品销量">
           <map-echart :mapData="addressGoodsSale"></map-echart>
         </hy-card>
-      </el-col>
-      <el-col :span="7">
+      </el-col> -->
+      <el-col :span="12">
         <hy-card title="分类商品数量(玫瑰图)">
           <rose-echart :roseData="categoryGoodsCount"></rose-echart>
         </hy-card>
@@ -53,8 +53,8 @@ export default defineComponent({
     PieEchart,
     RoseEchart,
     LineEchart,
-    BarEchart,
-    MapEchart
+    BarEchart
+    // MapEchart
   },
   setup() {
     const store = useStore()
@@ -73,7 +73,7 @@ export default defineComponent({
       const categoryGoodsSale = store.state.dashboard.categoryGoodsSale
       for (const item of categoryGoodsSale) {
         xLabels.push(item.name)
-        values.push(item.goodsCount)
+        values.push(item.vote_count)
       }
       return { xLabels, values }
     })

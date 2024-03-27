@@ -1,10 +1,10 @@
 import hyRequest from '../../index'
 
 enum DashboardAPI {
-  categoryGoodsCount = '/trending/all/week?api_key==en-US',
-  categoryGoodsSale = '/trending/all/week?api_key==en-US',
-  categoryGoodsFavor = '/goods/category/favor',
-  addressGoodsSale = '/goods/address/sale'
+  categoryGoodsCount = '/trending/all/day?api_key=394b314a52015ef04d8e3112971c2980&language=en-US',
+  categoryGoodsSale = '/trending/all/day?api_key=394b314a52015ef04d8e3112971c2980&language=en-US',
+  categoryGoodsFavor = '/trending/all/day?api_key=394b314a52015ef04d8e3112971c2980&language=en-US',
+  addressGoodsSale = '/trending/all/day?api_key=394b314a52015ef04d8e3112971c2980&language=en-US'
 }
 
 export function getCategoryGoodsCount() {

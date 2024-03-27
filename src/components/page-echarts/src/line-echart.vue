@@ -42,7 +42,7 @@ const options = computed(() => {
     grid: {
       left: '3%',
       right: '4%',
-      bottom: '3%',
+      bottom: '15%',
       containLabel: true
     },
     xAxis: [
@@ -55,6 +55,17 @@ const options = computed(() => {
     yAxis: [
       {
         type: 'value'
+      }
+    ],
+    dataZoom: [
+      {
+        type: 'inside',
+        start: 0,
+        end: 10
+      },
+      {
+        start: 0,
+        end: 10
       }
     ],
     series: [
